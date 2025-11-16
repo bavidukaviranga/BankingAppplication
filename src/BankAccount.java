@@ -27,6 +27,10 @@ public class BankAccount {
         }else {
             System.out.println("No sufficient balance");
         }
+
     }
 
+    public int getBalance() {
+        return this.balance;
+    }
 }
