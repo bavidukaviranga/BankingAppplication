@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BankAccount {
     public String name;
     public String birthday;
@@ -19,7 +21,12 @@ public class BankAccount {
         System.out.println("Deposit is Successful . Your balance is : "+getBalance());
 
     }
-    public void withdrawCash(int amount){
+    public void withdrawCash(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter amount you want withdraw :"+getBalance());
+        int amount = sc.nextInt();
+
         if (this.balance>=amount){
             this.balance-= amount;
             System.out.println("withdrawal is successful . Your balance is : "+getBalance());

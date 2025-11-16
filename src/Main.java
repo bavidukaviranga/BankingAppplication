@@ -8,7 +8,8 @@ public class Main {
 
 
         janesBankAccount.depositCash(1400);
-        janesBankAccount.withdrawCash(400);
+        janesBankAccount.withdrawCash();
+
         janesBankAccount2.depositCash(1000);
 
         System.out.println(janesBankAccount.getBalance());
