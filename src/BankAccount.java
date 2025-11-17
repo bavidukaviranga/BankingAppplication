@@ -22,18 +22,32 @@ public class BankAccount {
 
     }
     public void withdrawCash(){
+        boolean runWhile = true;
+        while (runWhile){
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter amount you want withdraw :"+getBalance());
-        int amount = sc.nextInt();
+            try {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter amount you want withdraw :"+getBalance());
+                int amount = sc.nextInt();
 
-        if (this.balance>=amount){
-            this.balance-= amount;
-            System.out.println("withdrawal is successful . Your balance is : "+getBalance());
+                if (this.balance>=amount){
+                    this.balance-= amount;
+                    System.out.println("withdrawal is successful . Your balance is : "+getBalance());
+                    runWhile = false;
+                }else {
+                    System.out.println("No sufficient balance .Your balance is : "+getBalance());
 
-        }else {
-            System.out.println("No sufficient balance .Your balance is : "+getBalance());
+                }
+
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+                System.out.println("Enter integer value");
+            }
+
+
         }
+
+
 
     }
 
