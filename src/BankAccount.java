@@ -40,7 +40,7 @@ public class BankAccount {
                 }
 
             }catch (Exception e){
-                System.out.println(e.getMessage());
+                System.out.println(e);
                 System.out.println("Enter integer value");
             }
 
